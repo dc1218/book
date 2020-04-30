@@ -2,7 +2,7 @@
 
 * [据说这么玩](README.md)
     * 初阶
-        * [语言](Primary/Language.md)
+        * [语言](Books/book_1/Primary/Language.md)
         * [数据结构和算法]()
         * [操作系统]()
         * [网络]()
