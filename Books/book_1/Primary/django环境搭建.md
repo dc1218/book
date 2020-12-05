@@ -7,3 +7,28 @@
 - 离线安装python依赖
 ## 部署python
 - 离线安装python
+
+
+# 离线安装
+- 参考：https://www.cnblogs.com/ianduin/p/7679239.html
+```
+
+
+yum update
+yum upgrade
+wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
+yum localinstall mysql57-community-release-el7-8.noarch.rpm
+yum repolist enabled | grep "mysql.*-community.*"
+yum install mysql-community-server
+
+systemctl start mysqld
+
+
+systemctl enable mysqld
+systemctl daemon-reload
+
+
+grep 'temporary password' /var/log/mysqld.log
+
+
+```
