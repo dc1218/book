@@ -32,7 +32,15 @@ systemctl enable mysqld
 systemctl daemon-reload
 
 
-grep 'temporary password' /var/log/mysqld.log
+//修改mysql默认密码
+
+shell> mysql -u root -p
+mysql> show variables like '%password%';
+mysql> set global validate_password_length=1;
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'mm123'; 
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mm123' WITH GRANT OPTION;
+mysql> FLUSH  PRIVILEGES;
+
 
 
 ```
