@@ -9,7 +9,7 @@
 - 离线安装python
 
 
-# 离线安装
+# 在线安装
 - 参考：https://www.cnblogs.com/ianduin/p/7679239.html
 ```
 
@@ -31,6 +31,8 @@ systemctl start mysqld
 systemctl enable mysqld
 systemctl daemon-reload
 
+//查看默认root密码
+grep 'temporary password' /var/log/mysqld.log
 
 //修改mysql默认密码
 
@@ -42,6 +44,8 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'mm123';
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mm123' WITH GRANT OPTION;
 mysql> FLUSH  PRIVILEGES;
 
+//python 升级
 
+wget -P /usr/local  http://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
 
 ```
