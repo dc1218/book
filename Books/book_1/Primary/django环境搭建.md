@@ -13,6 +13,10 @@
 - 参考：https://www.cnblogs.com/ianduin/p/7679239.html
 ```
 
+//换源
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+yum makecache
 
 yum update
 yum upgrade
