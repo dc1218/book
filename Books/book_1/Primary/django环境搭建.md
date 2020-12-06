@@ -36,6 +36,7 @@ systemctl daemon-reload
 
 shell> mysql -u root -p
 mysql> show variables like '%password%';
+mysql> set global validate_password_policy=0;
 mysql> set global validate_password_length=1;
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'mm123'; 
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mm123' WITH GRANT OPTION;
