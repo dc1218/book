@@ -44,6 +44,8 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'mm123';
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'mm123' WITH GRANT OPTION;
 mysql> FLUSH  PRIVILEGES;
 
+//python依赖
+yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel libffi-devel gcc make
 //python 升级
 
 wget -P /usr/local  http://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
