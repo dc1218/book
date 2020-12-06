@@ -47,5 +47,16 @@ mysql> FLUSH  PRIVILEGES;
 //python 升级
 
 wget -P /usr/local  http://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+cd /usr/local
+tar -xzvf Python-3.8.5.tgz -C /usr/local
+
+mkdir /usr/local/python3
+cd /usr/local/Python3.8.5
+./configure --prefix=/usr/local/python3
+make && make install
+
+mv /usr/bin/python /usr/bin/python_old2
+
+ln -s /usr/local/python3/bin/python3 /usr/bin/python
 
 ```
