@@ -2,5 +2,5 @@
 
 记录内容会同步到gitbook网站
 
-[gitbook地址](https://dcl.gitbook.io/books/)
+[gitbook网站](https://dcl.gitbook.io/books/)
 
